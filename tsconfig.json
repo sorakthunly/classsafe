@@ -8,11 +8,10 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
+    "declaration": true
   },
-  "files": [
-    "src/index.ts"
+  "exclude": [
+    "dist",
+    "node_modules"
   ]
 }
-
