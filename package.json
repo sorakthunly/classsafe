@@ -1,16 +1,24 @@
 {
   "name": "classpass",
   "version": "1.0.0",
-  "description": "A minimal class validator for basic javascript types",
+  "main": "dist/index.js",
+  "description": "A light-weight minimal typescript class validator for basic types (string, number and boolean)",
   "author": "Sorakthun Ly",
   "license": "ISC",
+  "scripts": {
+    "prepublish": "tsc",
+    "build": "tsc",
+    "docs": "typedoc --out docs src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "types": "./dist/index.d.ts",
   "dependencies": {
-    "reflect-metadata": "^0.1.10"
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.2.2"
   },
   "devDependencies": {
     "@types/reflect-metadata": "0.0.5",
     "@types/express": "^4.0.35",
-    "@types/node": "^7.0.12",
-    "typescript": "^2.2.2"
+    "@types/node": "^7.0.12"
   }
 }
