@@ -1,6 +1,6 @@
 {
   "name": "classpass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "description": "A light-weight minimal typescript class validator for basic types (string, number and boolean)",
   "author": "Sorakthun Ly",
