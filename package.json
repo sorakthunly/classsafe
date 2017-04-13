@@ -1,15 +1,19 @@
 {
   "name": "classpass",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "dist/index.js",
+  "bugs": "https://github.com/sorakthunly/classpass/issues",
   "description": "A light-weight minimal typescript class validator for basic types (string, number and boolean)",
   "author": "Sorakthun Ly",
   "license": "ISC",
   "scripts": {
     "prepublish": "tsc",
-    "build": "tsc",
     "docs": "typedoc --out docs src/index.ts",
     "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorakthunly/classpass.git"
   },
   "types": "./dist/index.d.ts",
   "dependencies": {

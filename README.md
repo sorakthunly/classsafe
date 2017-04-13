@@ -7,7 +7,7 @@ Run `npm install --save classpass`
 ## Example Use
 
 ```typescript
-import { Model, attr, string, boolean, number, validator } from 'classpass';
+import { Model, attr, string, boolean, number, validate } from 'classpass';
 
 class Person extends Model {
   @attr(string)

@@ -1,6 +1,7 @@
 export const string = 'string';
 export const number = 'number';
 export const boolean = 'boolean';
+export const Date = 'Date';
 
 /**
  * Base class allowing for data to be passed when an instance of the
