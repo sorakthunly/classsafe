@@ -19,7 +19,7 @@ export function validate(model: Object) {
   return new Promise((resolve, reject) => {
     let data = Reflect.getMetadata(ATTRS_META_KEY, model);
 
-    for (let key in model) {
+    for (let key in data) {
       if (typeof model[key] !== data[key]) reject('Invalid data type');
     }
 
