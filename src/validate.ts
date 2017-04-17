@@ -20,7 +20,11 @@ export function validate(model: Object) {
     let data = Reflect.getMetadata(ATTRS_META_KEY, model);
 
     for (let key in data) {
-      if (typeof model[key] !== data[key]) reject('Invalid data type');
+      if (model[key] === 'undefined') {
+        continue;
+      } else if (typeof model[key] !== data[key]) {
+        reject('Invalid data type');
+      }
     }
 
     resolve(true);
