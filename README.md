@@ -1,5 +1,5 @@
 # classpass
-A light-weight minimal typescript class validator for basic types (string, number and boolean)
+A light-weight es5-compatible typescript class validator for basic types (string, number and boolean).
 
 ## Installation
 Run `npm install --save classpass`
