@@ -9,6 +9,6 @@ export const Date = 'Date';
  */
 export abstract class Model {
   constructor(data?: any) {
-    Object.assign(this, data);
+    Object.keys(data).forEach(key => this[key] = data[key]);
   }
 }

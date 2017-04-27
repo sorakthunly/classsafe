@@ -1,4 +1,6 @@
 import 'reflect-metadata';
+import * as Promise from 'promise';
+import { boolean } from './model';
 export const ATTRS_META_KEY = 'attributes';
 
 /**
@@ -15,15 +17,22 @@ export function attr(type: string) {
 }
 
 /** Model basic type validator function */
+/** Model basic type validator function */
 export function validate(model: Object) {
   return new Promise((resolve, reject) => {
     let data = Reflect.getMetadata(ATTRS_META_KEY, model);
 
     for (let key in data) {
-      if (model[key] === undefined) {
-        continue;
-      } else if (typeof model[key] !== data[key]) {
-        reject('Invalid data type');
+      if (model[key] === undefined) continue;
+      if (typeof model[key] !== data[key]) {
+        const validBoolean = [0, 1].indexOf(model[key]) > -1;
+        if (data[key] === boolean && validBoolean) continue;
+        reject({
+          attr: key,
+          expectedType: data[key],
+          receivedType: typeof model[key],
+          message: 'Invalid data type'
+        });
       }
     }
 
