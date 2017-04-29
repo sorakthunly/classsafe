@@ -16,14 +16,16 @@ export function attr(type: string) {
   }
 }
 
-/** Model basic type validator function */
-/** Model basic type validator function */
+/**
+ * Model basic type validator function
+ * @param model  The model object to be validated
+ */
 export function validate(model: Object) {
   return new Promise((resolve, reject) => {
     let data = Reflect.getMetadata(ATTRS_META_KEY, model);
 
     for (let key in data) {
-      if (model[key] === undefined) continue;
+      if (model[key] === undefined || !model[key]) continue;
       if (typeof model[key] !== data[key]) {
         const validBoolean = [0, 1].indexOf(model[key]) > -1;
         if (data[key] === boolean && validBoolean) continue;

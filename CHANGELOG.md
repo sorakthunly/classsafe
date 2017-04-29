@@ -1,3 +1,7 @@
+# 0.2.2
+
+* Fixed validate function to ignore the attr if the value is null
+
 # 0.2.1
 
 * Updated README.md
