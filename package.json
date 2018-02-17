@@ -1,8 +1,8 @@
 {
-  "name": "classpass",
-  "version": "0.2.2",
+  "name": "classsafe",
+  "version": "0.2.3",
   "main": "dist/index.js",
-  "bugs": "https://github.com/sorakthunly/classpass/issues",
+  "bugs": "https://github.com/sorakthunly/classsafe/issues",
   "description": "A light-weight minimal typescript class validator for basic types (string, number and boolean)",
   "author": "Sorakthun Ly",
   "license": "ISC",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sorakthunly/classpass.git"
+    "url": "git+https://github.com/sorakthunly/classsafe.git"
   },
   "types": "./dist/index.d.ts",
   "dependencies": {
